@@ -38,7 +38,7 @@ public class GamePanel extends JPanel implements Runnable{
 
 
 	TileManager tileM = new TileManager(this);
-	KeyHandler keyH= new KeyHandler(this);
+	public KeyHandler keyH= new KeyHandler(this);
 	Thread gameThread;
 	public Player player = new Player(this,keyH);
 	public CollisionChecker cChaecker = new CollisionChecker(this);
@@ -143,9 +143,7 @@ public class GamePanel extends JPanel implements Runnable{
 			for (int i = 0; i < entityList.size(); i++) {
 				entityList.get(i).draw(g2);
 			}
-			for (int i = 0; i < entityList.size(); i++) {
-				entityList.remove(i);
-			}
+			entityList.clear();
 		}
 
 

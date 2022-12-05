@@ -27,7 +27,7 @@ public class CollisionChecker {
                 entity.collisionOn = true;
                 contactPlayer = true;
             }
-            entity.solidArea.x = entity.solidAreaDefaultX;
+             entity.solidArea.x = entity.solidAreaDefaultX;
                 entity.solidArea.y = entity.solidAreaDefaultY;
                 gp.player.solidArea.x = gp.player.solidAreaDefaultX;
                 gp.player.solidArea.y = gp.player.solidAreaDefaultY;

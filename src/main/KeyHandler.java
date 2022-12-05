@@ -15,7 +15,7 @@ public class KeyHandler implements KeyListener{
 	public void keyTyped(KeyEvent e) {
 
 	}
-public boolean upPressed, downPressed, leftPressed, rightPressed;
+public boolean upPressed, downPressed, leftPressed, rightPressed,enterPressed;
 	@Override
 	public void keyPressed(KeyEvent e) {
 		int code = e.getKeyCode();// returns the integer key keyCode associated with the key in this event
@@ -47,7 +47,7 @@ public boolean upPressed, downPressed, leftPressed, rightPressed;
 
 		}
 
-		if(gp.gameState == gp.titleState){
+	    if(gp.gameState == gp.titleState){
 			if (code==KeyEvent.VK_W) {
 				if(gp.ui.comNumber == 1){
 					gp.ui.comNumber--;
@@ -73,7 +73,7 @@ public boolean upPressed, downPressed, leftPressed, rightPressed;
 
 		}
 
-		if(gp.gameState == gp.playState){
+		 else if(gp.gameState == gp.playState){
 			if (code==KeyEvent.VK_W) {
 				upPressed= true;
 			}
@@ -88,6 +88,9 @@ public boolean upPressed, downPressed, leftPressed, rightPressed;
 			}
 			if (code==KeyEvent.VK_P) {
 				gp.gameState = gp.pauseState;
+			}
+			if(code==KeyEvent.VK_ENTER){
+				enterPressed=true;
 			}
 		}
 	}
@@ -107,6 +110,9 @@ public boolean upPressed, downPressed, leftPressed, rightPressed;
 }
         if (code==KeyEvent.VK_D) {
 			rightPressed=false;
+}
+        if(code==KeyEvent.VK_ENTER){
+	        enterPressed=false;
 }
 	}
 

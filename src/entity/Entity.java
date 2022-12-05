@@ -20,10 +20,12 @@ public class Entity {
 	public int speed;
 	
 	public BufferedImage up1,up2,down1,down2,left1,left2,right1,right2;
+	public BufferedImage attackUp1,attackUp2,attackDown1,attackDown2,attackRight1,attackRight2,attackLeft1,attackLeft2;
 	public String direction = "down";
 
 	public int x,y;
 	public Rectangle solidArea = new Rectangle(0,0,48,48);
+	public Rectangle attackArea = new Rectangle(0,0,0,0);
 	public int solidAreaDefaultX, solidAreaDefaultY;
 	public String name;
 	public int actionLookCounter = 0;
@@ -33,6 +35,7 @@ public class Entity {
 	public int life;
 	public boolean invincible = false;
 	public int invincibleCounter = 0;
+	public boolean attacking = false;
 	
 	public int spriteCounter=0;
 	public int spriteNum=1;
@@ -61,49 +64,36 @@ public class Entity {
 
 			switch (direction) {
 				case "up":
-					if(spriteNum == 1){
-						imageDraw = up1;
-					}if(spriteNum == 2){
-						imageDraw = up2;
-					}
+					if(spriteNum == 1){imageDraw = up1;}
+					if(spriteNum == 2){imageDraw = up2;}
 					break;
-
-				case "down":
-					if(spriteNum == 1){
-						imageDraw = down1;
-					}if(spriteNum == 2){
-						imageDraw = down2;
-					}
+			    case "down":
+					if(spriteNum == 1){imageDraw = down1;}
+					if(spriteNum == 2){imageDraw = down2;}
 					break;
-
 				case "left":
-					if(spriteNum == 1){
-						imageDraw = left1;
-					}if(spriteNum == 2){
-						imageDraw = left2;
-					}
+					if(spriteNum == 1){imageDraw = left1;}
+					if(spriteNum == 2){imageDraw = left2;}
 					break;
-
 				case "right":
-					if(spriteNum == 1){
-						imageDraw = right1;
-					}if(spriteNum == 2){
-						imageDraw = right2;
-					}
+					if(spriteNum == 1){imageDraw = right1;}
+					if(spriteNum == 2){imageDraw = right2;}
+					break;
 				default:
-						break;
+					break;
 				}
+				
 				g2.drawImage(imageDraw,  screenX, screenY, gp.tileSize, gp.tileSize, null);
 		}
 	}
 
-	public BufferedImage setup(String imagePath){
+	public BufferedImage setup(String imagePath,int width,int height){
 		UtilityTool uTool = new UtilityTool();
 		BufferedImage imageRan = null;
 		
 		try {
 			imageRan = ImageIO.read(getClass().getResourceAsStream(imagePath+".png"));
-			imageRan = uTool.scaleImage(imageRan, gp.tileSize, gp.tileSize);
+			imageRan = uTool.scaleImage(imageRan, width,height);
 		} catch (Exception e) {
 			System.out.println("Okumadı");
 		}
@@ -141,6 +131,13 @@ public class Entity {
 			}
 		}
 		spriteCounter++;
+		if(invincible == true){
+			invincibleCounter++;
+			if(invincibleCounter > 30){
+				invincible = false;
+				invincibleCounter = 0;
+			}
+		}
 
 		if(spriteCounter>10) {
 			if(spriteNum==1) {

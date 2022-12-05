@@ -7,11 +7,12 @@ import main.GamePanel;
 
 
 public class SlimeMon extends Entity{
-    
+    GamePanel gp;
+	
 
     public SlimeMon(GamePanel gp){
         super(gp);
-
+		this.gp=gp;
         name = "Slime Monster";
         speed = 1 ;
 		type = 1;
@@ -30,14 +31,14 @@ public class SlimeMon extends Entity{
 
     public void getImage (){
 
-            up1=setup("/monster/slimeMonster/slimeyukarı1");
-			up2=setup("/monster/slimeMonster/slimeyukarı2");
-			down1=setup("/monster/slimeMonster/slimeaşağı1");
-			down2=setup("/monster/slimeMonster/slimeaşağı2");   //bu metod playerin her yönü için 2 şer resim içeriyor 
-			left1=setup("/monster/slimeMonster/slimesol1");   //2 resmin olma sebebi ise bir yönde ilerlerken resimleri sıra
-			left2=setup("/monster/slimeMonster/slimesol2");   //değiştirerek animasyon yaratmak
-			right1=setup("/monster/slimeMonster/slimesağ1");
-			right2=setup("/monster/slimeMonster/slimesağ2");
+            up1=setup("/monster/slimeMonster/slimeyukarı1",gp.tileSize,gp.tileSize);
+			up2=setup("/monster/slimeMonster/slimeyukarı2",gp.tileSize,gp.tileSize);
+			down1=setup("/monster/slimeMonster/slimeaşağı1",gp.tileSize,gp.tileSize);
+			down2=setup("/monster/slimeMonster/slimeaşağı2",gp.tileSize,gp.tileSize);   //bu metod playerin her yönü için 2 şer resim içeriyor 
+			left1=setup("/monster/slimeMonster/slimesol1",gp.tileSize,gp.tileSize);   //2 resmin olma sebebi ise bir yönde ilerlerken resimleri sıra
+			left2=setup("/monster/slimeMonster/slimesol2",gp.tileSize,gp.tileSize);   //değiştirerek animasyon yaratmak
+			right1=setup("/monster/slimeMonster/slimesağ1",gp.tileSize,gp.tileSize);
+			right2=setup("/monster/slimeMonster/slimesağ2",gp.tileSize,gp.tileSize);
     }
     
     public void setAction() {
