@@ -30,14 +30,14 @@ public class SlimeMon extends Entity{
 
     public void getImage (){
 
-            up1=setup("/monster/slimeMonster/slime1");
-			up2=setup("/monster/slimeMonster/slime2");
-			down1=setup("/monster/slimeMonster/slime3");
-			down2=setup("/monster/slimeMonster/slime4");   //bu metod playerin her yönü için 2 şer resim içeriyor 
-			left1=setup("/monster/slimeMonster/slime5");   //2 resmin olma sebebi ise bir yönde ilerlerken resimleri sıra
-			left2=setup("/monster/slimeMonster/slime6");   //değiştirerek animasyon yaratmak
-			right1=setup("/monster/slimeMonster/slime7");
-			right2=setup("/monster/slimeMonster/slime8");
+            up1=setup("/monster/slimeMonster/slimeyukarı1");
+			up2=setup("/monster/slimeMonster/slimeyukarı2");
+			down1=setup("/monster/slimeMonster/slimeaşağı1");
+			down2=setup("/monster/slimeMonster/slimeaşağı2");   //bu metod playerin her yönü için 2 şer resim içeriyor 
+			left1=setup("/monster/slimeMonster/slimesol1");   //2 resmin olma sebebi ise bir yönde ilerlerken resimleri sıra
+			left2=setup("/monster/slimeMonster/slimesol2");   //değiştirerek animasyon yaratmak
+			right1=setup("/monster/slimeMonster/slimesağ1");
+			right2=setup("/monster/slimeMonster/slimesağ2");
     }
     
     public void setAction() {
