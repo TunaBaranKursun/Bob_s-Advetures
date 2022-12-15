@@ -126,6 +126,7 @@ else{
 				break;
 				case "left":
 				worldX-=speed;
+				
 				break;
 				case "right":
 				worldX+=speed;
