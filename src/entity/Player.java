@@ -16,7 +16,7 @@ public class Player extends Entity {
 
 	public KeyHandler keyH;
 
-	public final int screenX;
+	public final int screenX; //fina lolmasının sebebi player ın ekran pozisyonunun değişmemesi için
 	public final int screenY;
 	//constructor
 	public Player(GamePanel gp, KeyHandler keyH) {
@@ -24,7 +24,7 @@ public class Player extends Entity {
 		
 		this.keyH=keyH;
 
-		screenX=gp.screenWidth/2-gp.tileSize/2;
+		screenX=gp.screenWidth/2-gp.tileSize/2;// burası player' ın ekranın ortasında çıkmasını sağlıyor
 		screenY=gp.screenHeight/2-gp.tileSize/2;
 		setDefoultValues();
 		getPlayerImage();
@@ -36,10 +36,10 @@ public class Player extends Entity {
 		attackArea.height=36;
 	}
 	public void setDefoultValues() {
-		worldX=gp.tileSize*10;
-		worldY=gp.tileSize*9;
+		worldX=gp.tileSize*4;//player başlama noktası
+		worldY=gp.tileSize*6;
 		speed = 4;
-		direction = "up";
+		direction = "down";
 		maxLife = 6;
 		life = maxLife;
 	}
@@ -107,7 +107,7 @@ else{
 		gp.cChaecker.checkTile(this);
 
 		//Check Event
-		gp.eHandler.checkEvent();
+	
 
 		//Check monster Entity
 		int monsterIndex = gp.cChaecker.checkEntity(this, gp.slimMonster);
@@ -263,6 +263,5 @@ int solidAreaWidth=solidArea.width;
 		}	
 		    break;}
 			
-		g2.drawImage(image,tempScreenX,tempScreenY,null);//spnuncusu image observer ne işe yarıyor sor
-	}
-}
+		g2.drawImage(image,tempScreenX,tempScreenY,null);//
+}}

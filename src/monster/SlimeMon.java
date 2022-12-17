@@ -14,9 +14,9 @@ public class SlimeMon extends Entity{
         super(gp);
 		this.gp=gp;
         name = "Slime Monster";
-        speed = 1 ;
+        speed = 2;
 		type = 1;
-        maxLife = 4;
+        maxLife = 3;
         life = maxLife;
 
         solidArea.x = 3;
@@ -34,7 +34,7 @@ public class SlimeMon extends Entity{
             up1=setup("/monster/slimeMonster/slimeyukarı1",gp.tileSize,gp.tileSize);
 			up2=setup("/monster/slimeMonster/slimeyukarı2",gp.tileSize,gp.tileSize);
 			down1=setup("/monster/slimeMonster/slimeaşağı1",gp.tileSize,gp.tileSize);
-			down2=setup("/monster/slimeMonster/slimeaşağı2",gp.tileSize,gp.tileSize);   //bu metod playerin her yönü için 2 şer resim içeriyor 
+			down2=setup("/monster/slimeMonster/slimeaşağı2",gp.tileSize,gp.tileSize);   //bu metod canavarın her yönü için 2 şer resim içeriyor 
 			left1=setup("/monster/slimeMonster/slimesol1",gp.tileSize,gp.tileSize);   //2 resmin olma sebebi ise bir yönde ilerlerken resimleri sıra
 			left2=setup("/monster/slimeMonster/slimesol2",gp.tileSize,gp.tileSize);   //değiştirerek animasyon yaratmak
 			right1=setup("/monster/slimeMonster/slimesağ1",gp.tileSize,gp.tileSize);

@@ -19,14 +19,14 @@ public class GamePanel extends JPanel implements Runnable{
 	final int scale =3;
 
 	public final int tileSize = originalTileSize * scale; //16x3=48 pixel
-	public final int maxScreenCol = 16;
+	public final int maxScreenCol = 16;// burası görünen ekranın büyüklüğünü ayarlar
 	public final int maxScreenRow = 12;
-	public final int screenWidth = tileSize * maxScreenCol; //768 pixel // uptaded for my pc resolution
-	public final int screenHeight = tileSize * maxScreenRow;//576 pixels //  uptaded for my pc resolution
+	public final int screenWidth = tileSize * maxScreenCol; //768 pixel // 
+	public final int screenHeight = tileSize * maxScreenRow;//576 pixels // 
 
 
 // word Settings
-	public final int maxWorldCol = 50;
+	public final int maxWorldCol = 50;// burası da mapin büyüklüğünü ayarlar
 	public final int maxWorldRow = 50;
 	public final int worldWidth = tileSize*maxWorldCol;
 	public final int worldHeight = tileSize*maxWorldRow;
@@ -45,7 +45,6 @@ public class GamePanel extends JPanel implements Runnable{
 	int FPS = 60;//fps
 
 	public UI ui = new UI(this);
-	public EventHandler eHandler = new EventHandler(this);
 
 	public Entity slimMonster[] = new Entity[20];
 	ArrayList<Entity> entityList = new ArrayList<>();
