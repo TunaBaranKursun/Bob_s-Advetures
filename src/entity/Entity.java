@@ -107,14 +107,16 @@ public class Entity {
 			gp.cChaecker.checkEntity(this, gp.slimMonster);
 		}
 		boolean contactPlayer = gp.cChaecker.checkPlayer(this);
-	    if(this.type == 0 && contactPlayer){
+	    if(this.type == 0 && contactPlayer){//0 yani oyuncu contactPlayerı gerçekleştirince sağlanır
+			// burası çok basit şekilde yazılabilirdi if(contractPlayer) bu şekilde yazmama sebebimiz ilerde başka canavarlara kolaylıkla
+			//farklı hasar türleri ekleyebilmemiz için
 			if(gp.player.invincible == false){
 				gp.player.life -= 1;
 				gp.player.invincible = true;
 			}
 		}
 	
-		if(this.type == 1 && contactPlayer){
+		if(this.type == 1 && contactPlayer){//1 yani slime canavarı contactPlayerı gerçekleştirince oluşur
 			if(gp.player.invincible == false){
 				gp.player.life -= 1;
 				gp.player.invincible = true;

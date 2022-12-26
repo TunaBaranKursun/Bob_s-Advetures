@@ -14,7 +14,7 @@ public class SlimeMon extends Entity{
         super(gp);
 		this.gp=gp;
         name = "Slime Monster";
-        speed = 2;
+        speed = 3;
 		
         maxLife = 2;
         life = maxLife;

@@ -92,6 +92,7 @@ public class AssetSetter {
         gp.slimMonster[19].worldX = gp.tileSize*25;
         gp.slimMonster[19].worldY = gp.tileSize*45;
         
+       
      
         //son level
 

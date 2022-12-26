@@ -90,7 +90,7 @@ while(col<gp.maxWorldCol&& row<gp.maxWorldRow){
 	}
 }
 	}catch(Exception e){
-
+System.out.println("Harita okumada hata var!");
 	}
 }
 public void draw(Graphics2D g2) {// toplam 17 satır 32 sütun olması gerekiyor

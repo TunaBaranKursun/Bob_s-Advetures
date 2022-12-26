@@ -27,7 +27,7 @@ public class CollisionChecker {
                 entity.collisionOn = true;
                 contactPlayer = true;
             }
-             entity.solidArea.x = entity.solidAreaDefaultX;
+                entity.solidArea.x = entity.solidAreaDefaultX;
                 entity.solidArea.y = entity.solidAreaDefaultY;
                 gp.player.solidArea.x = gp.player.solidAreaDefaultX;
                 gp.player.solidArea.y = gp.player.solidAreaDefaultY;
@@ -120,7 +120,7 @@ switch(entity.direction){
         entity.collisionOn = true;}
     break;
     case "right":
-    entityRightCol=(entityLeftWorldX+entity.speed)/gp.tileSize;
+    entityRightCol=(entityRightWorldX+entity.speed)/gp.tileSize;
     tileNum1 = gp.tileM.mapTileNum[entityRightCol][entityTopRow];  
     tileNum2 = gp.tileM.mapTileNum[entityRightCol][entityBottomRow];
     if(gp.tileM.tile[tileNum1].collision==true || gp.tileM.tile[tileNum2].collision==true){

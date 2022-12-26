@@ -2,10 +2,6 @@ package entity;
 
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
-import java.io.IOException;
-
-import javax.imageio.ImageIO;
-
 import main.GamePanel;
 import main.KeyHandler;
 
@@ -39,7 +35,7 @@ public class Player extends Entity {
 		worldX=gp.tileSize*4;//player başlama noktası
 		worldY=gp.tileSize*6;
 		speed = 4;
-		direction = "down";
+		direction = "up";
 		maxLife = 6;
 		life = maxLife;
 	}
@@ -107,17 +103,16 @@ else{
 				direction = "right";
 		}
 		//check tile collision
-		collisionOn = false;
+		collisionOn = false;   //burası collesionu true olan bir yere girince oyuncunun çıkabilmesi için fırsat yaratır aksi taktirde 
+		//oyncu true olan bir yerde sıkışıp kalır
 		gp.cChaecker.checkTile(this);
 
-		//Check Event
+		
 	
 
 		//Check monster Entity
 		int monsterIndex = gp.cChaecker.checkEntity(this, gp.slimMonster);
 		contactMonster(monsterIndex);
-
-		
 
 		// if collision is false player can move
         if(collisionOn==false&&keyH.enterPressed==false){

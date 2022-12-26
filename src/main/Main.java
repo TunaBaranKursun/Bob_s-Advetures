@@ -16,7 +16,7 @@ public class Main {
 		window.setResizable(false);
 		window.add(gamePanel);
 		
-		window.pack(); 
+		window.pack(); //
 	    
 	    
 		window.setLocationRelativeTo(null);// No specify the location of the window(Bunun sayesinde pencere ekranın ortasında çıkacak)

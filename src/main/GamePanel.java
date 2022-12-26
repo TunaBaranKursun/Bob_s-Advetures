@@ -41,7 +41,7 @@ public class GamePanel extends JPanel implements Runnable{
 
 	public UI ui = new UI(this);
 
-	public Entity slimMonster[] = new Entity[20];// canavarların obje arrayi
+	public Entity slimMonster[] = new Entity[25];// canavarların obje arrayi
 	ArrayList<Entity> entityList = new ArrayList<>();
 
 	public int gameState;
