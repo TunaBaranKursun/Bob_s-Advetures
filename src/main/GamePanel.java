@@ -32,11 +32,6 @@ public class GamePanel extends JPanel implements Runnable{
 	public final int worldHeight = tileSize*maxWorldRow;
 
 	public AssetSetter aSetter = new AssetSetter(this);
-
-
-
-
-
 	TileManager tileM = new TileManager(this);
 	public KeyHandler keyH= new KeyHandler(this);
 	Thread gameThread;
@@ -46,7 +41,7 @@ public class GamePanel extends JPanel implements Runnable{
 
 	public UI ui = new UI(this);
 
-	public Entity slimMonster[] = new Entity[20];
+	public Entity slimMonster[] = new Entity[20];// canavarların obje arrayi
 	ArrayList<Entity> entityList = new ArrayList<>();
 
 	public int gameState;

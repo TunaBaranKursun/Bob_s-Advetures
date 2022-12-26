@@ -15,14 +15,14 @@ public class SlimeMon extends Entity{
 		this.gp=gp;
         name = "Slime Monster";
         speed = 2;
-		type = 1;
-        maxLife = 3;
+		
+        maxLife = 2;
         life = maxLife;
 
-        solidArea.x = 3;
-        solidArea.y = 10;
-        solidArea.width = 42;
-        solidArea.height = 30;
+        solidArea.x = 0;
+        solidArea.y = 0;
+        solidArea.width = 48;
+        solidArea.height = 48;
         solidAreaDefaultX = solidArea.x;
         solidAreaDefaultY = solidArea.y;
 
@@ -69,5 +69,6 @@ public class SlimeMon extends Entity{
 	public void update() {
 		super.update();
 		setAction();
+
 	}
 }

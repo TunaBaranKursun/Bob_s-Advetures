@@ -103,9 +103,17 @@ public class Entity {
 	public void update(){
 		collisionOn = false;
 		gp.cChaecker.checkTile(this);
-		gp.cChaecker.checkEntity(this, gp.slimMonster);
+		if(this.invincible==true){
+			gp.cChaecker.checkEntity(this, gp.slimMonster);
+		}
 		boolean contactPlayer = gp.cChaecker.checkPlayer(this);
-
+	    if(this.type == 0 && contactPlayer){
+			if(gp.player.invincible == false){
+				gp.player.life -= 1;
+				gp.player.invincible = true;
+			}
+		}
+	
 		if(this.type == 1 && contactPlayer){
 			if(gp.player.invincible == false){
 				gp.player.life -= 1;

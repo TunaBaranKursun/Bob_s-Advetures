@@ -30,7 +30,7 @@ public class Player extends Entity {
 		getPlayerImage();
 		getPlayerAttackImage();
 
-		solidArea = new Rectangle(8,16,32,32);
+		solidArea = new Rectangle(0,0,gp.tileSize,gp.tileSize);
 		
 		attackArea.width=36;
 		attackArea.height=36;
@@ -76,6 +76,10 @@ public class Player extends Entity {
 	}
 	public void upDate() {// update metodu oyunun asıl işlemlerinin gerçekleştiği yer(konum güncellemesi sağlık barı güncellemesi vs.)
 
+		if(gp.player.life==0){
+			System.exit(0);
+		//	System.load();
+		}
 		if(gp.keyH.enterPressed==true){
 			attacking=true;
 		}
@@ -87,7 +91,7 @@ public class Player extends Entity {
 
 		}
 else{
-	if(keyH.upPressed==true||keyH.downPressed==true||keyH.leftPressed==true||keyH.rightPressed==true||keyH.enterPressed==true) {//bu if cümlesi bir tuşa basmadığımız zaman ana karakterin durmasını sağlıyor
+	if(keyH.upPressed==true||keyH.downPressed==true||keyH.leftPressed==true||keyH.rightPressed==true) {//bu if cümlesi bir tuşa basmadığımız zaman ana karakterin durmasını sağlıyor
 		// bir tuşa basmayınca elbette hareket etmeyecek fakat olduğu yerde aynı directionun resimleri arasında sürekli geçiş yapacağı için kötü bir görüntü oluşturacak
 		
 		 if(keyH.upPressed==true) {
@@ -133,7 +137,7 @@ else{
 				break;
 			}
 		}
-		gp.keyH.enterPressed=false;
+		
 
 		spriteCounter++;
 
