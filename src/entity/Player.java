@@ -2,8 +2,11 @@ package entity;
 
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
+
+import main.AssetSetter;
 import main.GamePanel;
 import main.KeyHandler;
+import monster.SlimeMon;
 
 import java.awt.Rectangle;
 
@@ -72,9 +75,11 @@ public class Player extends Entity {
 	}
 	public void upDate() {// update metodu oyunun asıl işlemlerinin gerçekleştiği yer(konum güncellemesi sağlık barı güncellemesi vs.)
 
-		if(gp.player.life==0){
+		if(gp.slimMonster[19]==null&&gp.slimMonster[18]==null&&gp.slimMonster[17]==null&&gp.slimMonster[16]==null&&gp.slimMonster[15]==null&&gp.slimMonster[14]==null&&gp.slimMonster[13]==null&&gp.slimMonster[12]==null&&gp.slimMonster[11]==null&&gp.slimMonster[10]==null&&gp.slimMonster[9]==null&&gp.slimMonster[8]==null&&gp.slimMonster[7]==null&&gp.slimMonster[6]==null&&gp.slimMonster[5]==null&&gp.slimMonster[4]==null&&gp.slimMonster[3]==null&&gp.slimMonster[2]==null&&gp.slimMonster[1]==null&&gp.slimMonster[0]==null){//level 4 den itibaren canavarların yaşayıp yaşamadığını kontol edip ona göre haritayı güncelliyorum bu da oyuna level sistemini eklemiş oluyor.
+			gp.gameFinished=true;
+		}
+		else if(gp.player.life==0){
 			System.exit(0);
-		//	System.load();
 		}
 		if(gp.keyH.enterPressed==true){
 			attacking=true;
@@ -146,7 +151,7 @@ else{
 			spriteCounter=0;
 		}
 		}
-		if(invincible == true){
+		if(invincible == true){//bir süre sonra karakteri invinciblemoddan çıkarır
 			invincibleCounter++;
 			if(invincibleCounter > 60){
 				invincible = false;
@@ -183,12 +188,6 @@ int solidAreaWidth=solidArea.width;
 		   worldY=currentWorldY;
 		   solidArea.height=solidAreaHeight;
 		   solidArea.width=solidAreaWidth;
-
-
-
-
-
-
 
 		}
 		if(spriteCounter>25){

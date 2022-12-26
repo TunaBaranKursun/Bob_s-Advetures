@@ -36,8 +36,8 @@ public class CollisionChecker {
         return contactPlayer;
     }
 
-    public int checkEntity(Entity entity, Entity[] target) {
-
+    public int checkEntity(Entity entity, Entity[] target) {// içine varlık obje arrayi yolluyoruz ki ilerde farklı canavarlar eklediğimizde entity obje arrayi o canavar için de geçerli olduğundan onlar için de kullanabilelim
+//canavarların oyuncunun içinden geçememesini sağlıyor
         int index = 999;
 
         for (int i = 0; i < target.length; i++) {

@@ -14,6 +14,9 @@ import javax.swing.JPanel;
 
 
 public class GamePanel extends JPanel implements Runnable{
+	
+	public boolean gameFinished;
+
 	// screen settings
 	final int originalTileSize = 16; //16x16 tile
 	final int scale =3;
@@ -41,7 +44,7 @@ public class GamePanel extends JPanel implements Runnable{
 
 	public UI ui = new UI(this);
 
-	public Entity slimMonster[] = new Entity[25];// canavarların obje arrayi
+	public Entity slimMonster[] = new Entity[20];// canavarların obje arrayi
 	ArrayList<Entity> entityList = new ArrayList<>();
 
 	public int gameState;
@@ -111,6 +114,7 @@ public class GamePanel extends JPanel implements Runnable{
 				}
 			}
 		}
+		
 	}
 
 	@Override

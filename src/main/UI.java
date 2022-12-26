@@ -15,14 +15,15 @@ public class UI {
     Graphics2D g2;
     public int comNumber = 0;
     BufferedImage heartFull , heartHalf ,heartBlank ;
-
+    Font arial_40;
    
 
     public UI(GamePanel gp){
         this.gp = gp;
 
-        //create hud object
+    arial_40= new Font("Arial",Font.PLAIN,40);
 
+        //create heart object
         Entity heart = new HeartObject(gp);
         heartFull = heart.image;
         heartHalf = heart.image2;
@@ -33,6 +34,12 @@ public class UI {
     public void draw(Graphics2D g2) {
         this.g2 = g2;
 
+       
+        if(gp.gameFinished){
+            g2.setFont(arial_40);
+            g2.setColor(Color.white);
+            g2.drawString("You Win!!!", gp.tileSize, gp.tileSize*2);
+        }
         if(gp.gameState == gp.playState){
             drawPlayerLife();
         }

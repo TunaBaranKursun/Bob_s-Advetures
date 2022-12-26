@@ -21,19 +21,24 @@ public TileManager(GamePanel gpt) {
 	
 	mapTileNum= new int[gp.maxWorldCol][gp.maxWorldRow];
 	
-	/*while(!(gp.slimMonster[19]==null&&gp.slimMonster[18]==null&&gp.slimMonster[17]==null&&gp.slimMonster[16]==null&&gp.slimMonster[15]==null&&gp.slimMonster[14]==null&&gp.slimMonster[13]==null&&gp.slimMonster[12]==null&&gp.slimMonster[11]==null&&gp.slimMonster[10]==null&&gp.slimMonster[9]==null&&gp.slimMonster[8]==null&&gp.slimMonster[7]==null&&gp.slimMonster[6]==null&&gp.slimMonster[5]==null&&gp.slimMonster[4]==null&&gp.slimMonster[3]==null&&gp.slimMonster[2]==null&&gp.slimMonster[1]==null&&gp.slimMonster[0]==null)){
-		if(gp.slimMonster[19]==null&&gp.slimMonster[18]==null&&gp.slimMonster[17]==null&&gp.slimMonster[16]==null&&gp.slimMonster[15]==null&&gp.slimMonster[14]==null){//level 4 den itibaren canavarların yaşayıp yaşamadığını kontol edip ona göre haritayı güncelliyorum bu da oyuna level sistemini eklemiş oluyor.
+	
+	/*	if(gp.slimMonster[19]==null&&gp.slimMonster[18]==null&&gp.slimMonster[17]==null&&gp.slimMonster[16]==null&&gp.slimMonster[15]==null&&gp.slimMonster[14]==null){//level 4 den itibaren canavarların yaşayıp yaşamadığını kontol edip ona göre haritayı güncelliyorum bu da oyuna level sistemini eklemiş oluyor.
 			loadMap("/maps/worldLevel4.txt");
+			getTileImage();
 		}else if(gp.slimMonster[13]==null&&gp.slimMonster[12]==null&&gp.slimMonster[11]==null&&gp.slimMonster[10]==null&&gp.slimMonster[9]==null&&gp.slimMonster[8]==null){
 			loadMap("/maps/wordLevel3.txt");
+			getTileImage();
 		}else if(gp.slimMonster[7]==null&&gp.slimMonster[6]==null&&gp.slimMonster[5]==null&&gp.slimMonster[4]==null&&gp.slimMonster[3]==null&&gp.slimMonster[2]==null){
 			loadMap("/maps/worldLevel2.txt");
+			getTileImage();
 		}else if(gp.slimMonster[1]==null&&gp.slimMonster[0]==null){
 			loadMap("/maps/worldLevel1.txt");
+			getTileImage();
 		}
-	}*/
-	loadMap("/maps/word.txt");
-	getTileImage();
+	     else{loadMap("/maps/word.txt");
+		 getTileImage();}*/
+		 loadMap("/maps/word.txt");
+		 getTileImage();
 	
 }
 public void getTileImage() {

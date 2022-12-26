@@ -13,20 +13,24 @@ public class Main {
 		window.setTitle("Bob's Adventures");
 		
 		GamePanel gamePanel = new GamePanel();// gamePanel is a JPanel with extra functions
+		
+		
 		window.setResizable(false);
 		window.add(gamePanel);
 		
-		window.pack(); //
+		window.pack(); //ekranın açılmasını sağlar
 	    
 	    
 		window.setLocationRelativeTo(null);// No specify the location of the window(Bunun sayesinde pencere ekranın ortasında çıkacak)
 		window.setVisible(true);//its for see the window
-
+	
 		gamePanel.setupGame();
+		
 		gamePanel.startGameThreat();
               
 
 
-	}
+	
 
+}
 }
