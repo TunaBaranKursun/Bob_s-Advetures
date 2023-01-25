@@ -111,9 +111,11 @@ public void draw(Graphics2D g2) {// toplam 17 satır 32 sütun olması gerekiyor
 
 int worldX = worldCol*gp.tileSize;
 int worldY = worldRow*gp.tileSize;
-int screenX = worldX - gp.player.worldX + gp.player.screenX;
-int screenY = worldY - gp.player.worldY + gp.player.screenY;
 
+//burada çizme işlemini oyuncunun konumuna göre yapıyoruz
+int screenX = worldX - gp.player.worldX + gp.player.screenX;//o tile ın konumundan oyuncunun dünya konumunu çıkarıp
+int screenY = worldY - gp.player.worldY + gp.player.screenY;//oyuncunun ekran değerlerini eklediğimizde ekranın içindeki kareleri çizen bir sistem elde ederiz
+//mesela oyuncunun konum değeri 500 e 500 olduğu zaman bu metod sayesinde 
 
 		g2.drawImage(tile[tileNum].image,screenX,screenY,gp.tileSize,gp.tileSize,null);
 		worldCol++;

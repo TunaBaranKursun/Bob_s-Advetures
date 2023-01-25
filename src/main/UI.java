@@ -21,7 +21,7 @@ public class UI {
     public UI(GamePanel gp){
         this.gp = gp;
 
-    arial_40= new Font("Arial",Font.PLAIN,40);
+    arial_40= new Font("Arial",Font.PLAIN,40);// oyun bittiği zaman ekranın sol üst köşesine you win yazdırmamız için bu font objesini oluşturduk
 
         //create heart object
         Entity heart = new HeartObject(gp);

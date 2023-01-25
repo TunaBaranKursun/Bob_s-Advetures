@@ -10,9 +10,6 @@ import java.awt.Graphics2D;
 import java.util.ArrayList;
 
 import javax.swing.JPanel;
-
-
-
 public class GamePanel extends JPanel implements Runnable{
 	
 	public boolean gameFinished;
@@ -56,8 +53,7 @@ public class GamePanel extends JPanel implements Runnable{
 	public GamePanel() {
 		this.setPreferredSize(new Dimension(screenWidth,screenHeight));
 		this.setBackground(Color.black);
-        this.setDoubleBuffered(true);// If set to true, all the drawing from this component will be done in an offscreen painting buffer.	
-	    //In short, enabling this can improve game's rendering performance
+       
         this.addKeyListener(keyH);
         this.setFocusable(true);// with this, this GamePanel can be Focused to receive key input.
 	}
