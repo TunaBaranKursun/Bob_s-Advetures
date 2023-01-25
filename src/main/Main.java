@@ -1,9 +1,9 @@
 package main;
 
 import javax.swing.JFrame;
-// aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
 public class Main {
-//  4
+//  
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
