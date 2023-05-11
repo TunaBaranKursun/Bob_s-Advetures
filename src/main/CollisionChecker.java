@@ -8,6 +8,7 @@ public class CollisionChecker {
         this.gp=gp;
     }
 
+    
     public boolean checkPlayer(Entity entity) {
         
         boolean contactPlayer = false;
